@@ -1,0 +1,56 @@
+[
+    {
+        "ownerName": "albert",
+        "sqfeet": 1800,
+        "beds": 2,
+        "bath": 3,
+        "price": 2300000,
+        "place": "tambaram",
+        "contactNumber": 9876543210
+    },
+    {
+        "ownerName": "albert",
+        "sqfeet": 1800,
+        "beds": 2,
+        "bath": 3,
+        "price": 2300000,
+        "place": "tambaram",
+        "contactNumber": 9876543210
+    },
+    {
+        "ownerName": "sriram",
+        "sqfeet": 3200,
+        "beds": 4,
+        "bath": 2,
+        "price": 5000000,
+        "place": "tambaram",
+        "contactNumber": 9876543210
+    },
+    {
+        "ownerName": "albert",
+        "sqfeet": 2300,
+        "beds": 4,
+        "bath": 2,
+        "price": 6300000,
+        "place": "tambaram",
+        "contactNumber": 9896543210
+    },
+    {
+        "ownerName": "ashoke",
+        "sqfeet": 2000,
+        "beds": 3,
+        "bath": 2,
+        "price": 4300000,
+        "place": "rajakelpakkam",
+        "contactNumber": 9876943210
+    },
+    {
+        "ownerName": "kishore",
+        "sqfeet": 1200,
+        "beds": 4,
+        "bath": 4,
+        "price": 3300000,
+        "place": "madambakkam",
+        "contactNumber": 9876343210
+    }
+]

@@ -1,0 +1,30 @@
+[
+    {
+        "name": "tornado",
+        "brand": "benelli",
+        "cc": 250,
+        "topspeed": 185,
+        "price": 4
+    },
+    {
+        "name": "cbr",
+        "brand": "honda",
+        "cc": 300,
+        "topspeed": 195,
+        "price": 3
+    },
+    {
+        "name": "r",
+        "brand": "yamaha",
+        "cc": 321,
+        "topspeed": 190,
+        "price": 4
+    },
+    {
+        "name": "rr",
+        "brand": "apachi",
+        "cc": 300,
+        "topspeed": 165,
+        "price": 3
+    }
+]
