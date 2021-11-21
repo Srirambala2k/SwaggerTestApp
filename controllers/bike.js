@@ -11,6 +11,9 @@ const GetBikeByFilter = async(req,res)=>{
    const {name,brand,cc,topspeed,price} = req.query
    const queryobj = {}
    console.log(req.query)
+   if(product_id){
+      queryobj.product_id = product_id
+   }
    if(name){
       queryobj.name = name
    }
@@ -31,5 +34,25 @@ const GetBikeByFilter = async(req,res)=>{
    res.status(200).json(result) 
 }
 
+const AddBike = async(req,res)=>{
+   var result = await bike.insertMany(req.body) 
+   res.status(200).json(result)  
+}
 
-module.exports = {GetAllBike,GetBikeByFilter}
+const UpdateBike = async(req,res)=>{
+   console.log(req.body)
+   var result = await bike.updateOne(req.body)
+   res.status(200).json(result)
+}
+
+const DeleteBike = async(req,res)=>{
+   const queryobject = {};
+   queryobject.product_id = req.params.product_id
+   console.log(queryobject)
+   var result = await bike.deleteOne(queryobject)
+   res.status(200).json(result)
+}
+
+
+
+module.exports = {GetAllBike,GetBikeByFilter,AddBike,UpdateBike,DeleteBike}

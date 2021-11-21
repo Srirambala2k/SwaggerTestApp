@@ -1,6 +1,9 @@
 const mongoose = require("mongoose")
 
 const homeSchema = new mongoose.Schema({
+    product_id:{
+        type:Number
+    },
     ownerNamme:{
         type:String
     },

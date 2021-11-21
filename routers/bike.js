@@ -1,8 +1,32 @@
 const express = require("express")
 const router = express.Router()
 
-const {GetAllBike,GetBikeByFilter} = require("../controllers/bike")
+const {GetAllBike,GetBikeByFilter,AddBike,UpdateBike,DeleteBike} = require("../controllers/bike")
 
+const Schema = require("../models/bike")
+
+
+
+/**
+ * @swagger
+ * components:
+ *  schemas:
+ *      bike:
+ *          type: object
+ *          properties:
+ *              product_id: 
+ *                  type: integer
+ *              name:
+ *                  type: string
+ *              brand:
+ *                  type: string
+ *              cc:
+ *                  type: integer
+ *              topspeed:
+ *                  type: integer
+ *              price:
+ *                  type: integer            
+ */
 
 /**
  * @swagger
@@ -36,6 +60,57 @@ router.route("/").get(GetAllBike)
 *         description: Returns bike using filters.
 */
 router.route("/query/").get(GetBikeByFilter)
+
+
+/**
+ * @swagger
+ * /api/bike/:
+ *   post:
+ *     summary: Add a new bike information
+ *     requestBody:
+ *       required: true
+ *       content: 
+ *          application/json:
+ *              schema:
+ *                  $ref: "#components/schemas/bike"
+ *     responses:
+ *       200:
+ *         description: Returns newly added bike Information.
+ */
+ router.post("/",AddBike)
+
+ /**
+ * @swagger
+ * /api/bike/:
+ *   put:
+ *     summary: update bike information
+ *     requestBody:
+ *       required: true
+ *       content: 
+ *          application/json:
+ *              schema:
+ *                  $ref: "#components/schemas/bike"
+ *     responses:
+ *       200:
+ *         description: Returns updated bike Information.
+ */
+  router.put("/",UpdateBike)
+
+  /**
+ * @swagger
+ * /api/bike/{product_id}:
+ *   delete:
+ *     summary: delete bike information
+ *     parameters:
+ *     - in: path
+ *       name: product_id
+ *       schema:
+ *          type: integer
+ *     responses:
+ *       200:
+ *         description: Returns deleted Information.
+ */
+ router.delete("/:product_id",DeleteBike)
 
 
 

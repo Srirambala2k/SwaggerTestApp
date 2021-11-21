@@ -50,9 +50,10 @@ const UpdateDress = async(req,res)=>{
 
 const DeleteDress = async(req,res)=>{
    const queryobject = {};
-   queryobject.product_id = req.prams.product_id
+   queryobject.product_id = req.params.product_id
    console.log(queryobject)
    var result = await dress.deleteOne(queryobject)
+   res.status(200).json(result)
 }
 
 module.exports = {GetAllDress,GetDressByFilter,AddDress,UpdateDress,DeleteDress}

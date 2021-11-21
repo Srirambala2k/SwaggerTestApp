@@ -10,6 +10,9 @@ const GetHomesByFilter = async(req,res)=>{
    const {ownerName,sqfeet,beds,bath,price,place,contactNumber} =req.query
    const queryobj = {}
    console.log(req.query)
+   if(product_id){
+      queryobj.product_id =   product_id
+   }
    if(ownerName){
       queryobj.ownerName = ownerName
    }
@@ -36,5 +39,24 @@ const GetHomesByFilter = async(req,res)=>{
    res.status(200).json(result) 
 } 
 
-module.exports = {GetAllHome,GetHomesByFilter}
+const AddHome = async(req,res)=>{
+   var result = await home.insertMany(req.body) 
+   res.status(200).json(result)  
+}
+
+const UpdateHome = async(req,res)=>{
+   console.log(req.body)
+   var result = await home.updateOne(req.body)
+   res.status(200).json(result)
+}
+
+const DeleteHome = async(req,res)=>{
+   const queryobject = {};
+   queryobject.product_id = req.params.product_id
+   console.log(queryobject)
+   var result = await home.deleteOne(queryobject)
+   res.status(200).json(result)
+}
+
+module.exports = {GetAllHome,GetHomesByFilter,AddHome,UpdateHome,DeleteHome}
 
