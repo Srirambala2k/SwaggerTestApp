@@ -1,0 +1,62 @@
+[
+    {
+        "product_id":101,
+        "name":"half-sleeve shirt",
+        "size":"xl",
+        "colour":"black",
+        "sex":"men",
+        "price": 300,
+        "stocks": 10
+    },
+    
+    {
+        "product_id":102,
+        "name":"full-sleeve shirt",
+        "size":"l",
+        "colour":"white",
+        "sex":"men",
+        "price": 300,
+        "stocks": 20
+    },
+    
+    {
+        "product_id":103,
+        "name":"T-shirt",
+        "size":"m",
+        "colour":"black",
+        "sex":"women",
+        "price": 200,
+        "stocks": 10
+    },
+    
+    {
+        "product_id":104,
+        "name":"jacket",
+        "size":"l",
+        "colour":"white",
+        "sex":"women",
+        "price": 500,
+        "stocks": 20
+    },
+    
+    {
+        "product_id":105,
+        "name":"coat",
+        "size":"xl",
+        "colour":"black&white",
+        "sex":"men",
+        "price": 900,
+        "stocks": 40
+    },
+    
+    {
+        "product_id":106,
+        "name":"half-sleeve shirt",
+        "size":"xl",
+        "colour":"black",
+        "sex":"men",
+        "price": 300,
+        "stocks": 10
+    }
+
+]
