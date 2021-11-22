@@ -34,6 +34,7 @@ const Schema = require("../models/bike")
  *   get:
  *     tags:
  *     - "Bike"
+ *     summary: Get all bike information
  *     description: Get all the bike information
  *     responses:
  *       200:
@@ -47,6 +48,7 @@ router.route("/").get(GetAllBike)
 *   get:
 *     tags:
 *     - "Bike"
+*     summary: Get all bike information by filter
 *     description: Get bike using filters
 *     parameters:
 *      - in: query

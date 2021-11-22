@@ -37,6 +37,7 @@ const Schema = require("../models/home")
  *   get:
  *     tags:
  *     - "Home"
+ *     summary: Get all home information
  *     description: Get all the home information
  *     responses:
  *       200:
@@ -49,7 +50,8 @@ router.route("/").get(GetAllHome)
 * /api/home/query/:
 *   get:
 *     tags:
-*     - "home"
+*     - "Home" 
+*     summary: Get home information by filter 
 *     description: Get homes using filters
 *     parameters:
 *      - in: query
@@ -74,7 +76,7 @@ router.route("/query/").get(GetHomesByFilter)
  * /api/home/:
  *   post:
  *     tags:
- *     - ""Home
+ *     - "Home"
  *     summary: Add a new home information
  *     requestBody:
  *       required: true

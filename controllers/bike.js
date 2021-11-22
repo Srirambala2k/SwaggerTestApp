@@ -8,7 +8,7 @@ const GetAllBike = async(req,res)=>{
 
 
 const GetBikeByFilter = async(req,res)=>{
-   const {name,brand,cc,topspeed,price} = req.query
+   const {product_id,name,brand,cc,topspeed,price} = req.query
    const queryobj = {}
    console.log(req.query)
    if(product_id){

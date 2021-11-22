@@ -7,7 +7,7 @@ const GetAllHome = async(req,res)=>{
 } 
 
 const GetHomesByFilter = async(req,res)=>{
-   const {ownerName,sqfeet,beds,bath,price,place,contactNumber} =req.query
+   const {product_id,ownerName,sqfeet,beds,bath,price,place,contactNumber} =req.query
    const queryobj = {}
    console.log(req.query)
    if(product_id){

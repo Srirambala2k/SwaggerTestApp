@@ -8,7 +8,7 @@ const GetAllDress = async(req,res)=>{
 
 
 const GetDressByFilter = async(req,res)=>{
-   const {name,size,colour,sex,price,stocks} = req.query
+   const {product_id,name,size,colour,sex,price,stocks} = req.query
    const queryobj = {}
    if(name){
       queryobj.name = name
@@ -22,8 +22,8 @@ const GetDressByFilter = async(req,res)=>{
    if(sex){
       queryobj.sex = sex
    }
-   if(id){
-      queryobj.id = id
+   if(product_id){
+      queryobj.product_id = product_id
    }
    if(price){
       queryobj.price = price

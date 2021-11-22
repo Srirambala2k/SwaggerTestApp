@@ -36,6 +36,7 @@ const Schema = require("../models/dress")
  *   get:
  *     tags:
  *     - "Dress"
+ *     summary: Get all dress information
  *     description: Get all the dress information
  *     responses:
  *       200:
@@ -49,6 +50,7 @@ router.route("/").get(GetAllDress)
 *   get:
 *     tags:
 *     - "Dress"
+*     summary: Get all dress information by filter
 *     description: Get dress using filters
 *     parameters:
 *      - in: query
