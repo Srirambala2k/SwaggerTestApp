@@ -34,6 +34,8 @@ const Schema = require("../models/dress")
  * @swagger
  * /api/dress/:
  *   get:
+ *     tags:
+ *     - "Dress"
  *     description: Get all the dress information
  *     responses:
  *       200:
@@ -45,6 +47,8 @@ router.route("/").get(GetAllDress)
 * @swagger
 * /api/dress/query/:
 *   get:
+*     tags:
+*     - "Dress"
 *     description: Get dress using filters
 *     parameters:
 *      - in: query
@@ -67,6 +71,8 @@ router.route("/query/").get(GetDressByFilter)
  * @swagger
  * /api/dress/:
  *   post:
+ *     tags:
+ *     - "Dress"
  *     summary: Add a new dress information
  *     requestBody:
  *       required: true
@@ -84,6 +90,8 @@ router.route("/query/").get(GetDressByFilter)
  * @swagger
  * /api/dress/:
  *   put:
+ *     tags:
+ *     - "Dress"
  *     summary: update dress information
  *     requestBody:
  *       required: true
@@ -101,6 +109,8 @@ router.route("/query/").get(GetDressByFilter)
  * @swagger
  * /api/dress/{product_id}:
  *   delete:
+ *     tags:
+ *     - "Dress"
  *     summary: delete dress information
  *     parameters:
  *     - in: path

@@ -32,6 +32,8 @@ const Schema = require("../models/bike")
  * @swagger
  * /api/bike/:
  *   get:
+ *     tags:
+ *     - "Bike"
  *     description: Get all the bike information
  *     responses:
  *       200:
@@ -43,6 +45,8 @@ router.route("/").get(GetAllBike)
 * @swagger
 * /api/bike/query/:
 *   get:
+*     tags:
+*     - "Bike"
 *     description: Get bike using filters
 *     parameters:
 *      - in: query
@@ -66,6 +70,8 @@ router.route("/query/").get(GetBikeByFilter)
  * @swagger
  * /api/bike/:
  *   post:
+ *     tags:
+ *     - "Bike"
  *     summary: Add a new bike information
  *     requestBody:
  *       required: true
@@ -83,6 +89,8 @@ router.route("/query/").get(GetBikeByFilter)
  * @swagger
  * /api/bike/:
  *   put:
+ *     tags:
+ *     - "Bike"
  *     summary: update bike information
  *     requestBody:
  *       required: true
@@ -100,6 +108,8 @@ router.route("/query/").get(GetBikeByFilter)
  * @swagger
  * /api/bike/{product_id}:
  *   delete:
+ *     tags:
+ *     - "Bike"
  *     summary: delete bike information
  *     parameters:
  *     - in: path

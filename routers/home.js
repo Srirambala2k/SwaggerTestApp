@@ -35,6 +35,8 @@ const Schema = require("../models/home")
  * @swagger
  * /api/home/:
  *   get:
+ *     tags:
+ *     - "Home"
  *     description: Get all the home information
  *     responses:
  *       200:
@@ -46,6 +48,8 @@ router.route("/").get(GetAllHome)
 * @swagger
 * /api/home/query/:
 *   get:
+*     tags:
+*     - "home"
 *     description: Get homes using filters
 *     parameters:
 *      - in: query
@@ -69,6 +73,8 @@ router.route("/query/").get(GetHomesByFilter)
  * @swagger
  * /api/home/:
  *   post:
+ *     tags:
+ *     - ""Home
  *     summary: Add a new home information
  *     requestBody:
  *       required: true
@@ -86,6 +92,8 @@ router.route("/query/").get(GetHomesByFilter)
  * @swagger
  * /api/home/:
  *   put:
+ *     tags:
+ *     - "Home"
  *     summary: update home information
  *     requestBody:
  *       required: true
@@ -103,6 +111,8 @@ router.route("/query/").get(GetHomesByFilter)
  * @swagger
  * /api/home/{product_id}:
  *   delete:
+ *     tags:
+ *     - "Home"
  *     summary: delete home information
  *     parameters:
  *     - in: path
