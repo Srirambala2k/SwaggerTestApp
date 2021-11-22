@@ -2,6 +2,8 @@ require("dotenv").config()
 const express = require("express")
 const connectDB = require("./db/connect")
 const dressRouter = require("./routers/dress")
+const bikeRouter = require("./routers/bike")
+const homeRouter = require("./routers/home")
 
 const swaggerUI= require("swagger-ui-express");
 const swaggerJsDoc=require("swagger-jsdoc");
@@ -34,6 +36,8 @@ app.use(express.urlencoded({
 }));
 app.use("/api-docs",swaggerUI.serve,swaggerUI.setup(specs))
 app.use("/api/dress",dressRouter);
+app.use("/api/bike",bikeRouter);
+app.use("/api/home",homeRouter);
 
 app.use(express.json());
 
@@ -47,4 +51,4 @@ const start = async (req,res) =>{
     }
 };
 
-start();
+start(); 
